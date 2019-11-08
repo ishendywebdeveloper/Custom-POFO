@@ -1890,7 +1890,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 .icon-very-small {font-size: 16px}
 .icon-small {font-size: 24px}
 .icon-medium {font-size: 35px}
-.icon-extra-medium {font-size: 100px}
+.icon-extra-medium {font-size: 40px}
 .icon-large {font-size: 50px}
 .icon-round-small {border-radius: 100%; display: table-cell; height: 80px; margin: 0 auto; text-align: center; vertical-align: middle; width: 80px; font-size:32px}
 .icon-round-medium {border-radius: 100%; display: table-cell; height: 90px; margin: 0 auto; text-align: center; vertical-align: middle; width: 90px;}
@@ -3862,6 +3862,73 @@ aside .latest-post li figure {width: 75px;}
    developer custom css
 ====================================== */
 
+.icon-extra-large {font-size: 100px}
+
+.icon-mega {font-size: 150px}
+
 header a.logo img.logo-dark{
     max-height: 57px;
 }
+
+.check-package{
+    padding: 5px 8px;
+    width: auto;
+    float: left;
+    margin-left: -24px;
+    background: #ffeded;
+}
+
+.radio, .radio label, .radio select{
+    cursor: pointer;
+}
+
+.radio .height-fixed{
+    min-height: 155px;
+}
+
+s,
+strike {
+    text-decoration: none;
+    /*we're replacing the default line-through*/
+    position: relative;
+    display: inline-block;
+    /* keeps it from wrapping across multiple lines */
+}
+
+s:after,
+strike:after {
+    content: "";
+    /* required property */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid red;
+    height: 45%;
+    /* adjust as necessary, depending on line thickness */
+    /* or use calc() if you don't need to support IE8: */
+    height: calc(50% - 1px);
+    /* 1px = half the line thickness */
+    width: 100%;
+    transform: rotateZ(-4deg);
+}
+
+.text-mega {font-size: 20px; line-height:26px}
+
+.sml-font {font-family: 'Montserrat', sans-serif; font-weight: 500; font-size:13px;}
+
+.radio .row.mb-5{
+    /*float: left;
+    margin-left: -35px;*/
+}
+
+
+.reserve-cart-header { padding-top: 14px; float: right; letter-spacing: 1px}
+.reserve-form .reserve-input { border: none; border-radius: 0; border-bottom: 2px solid rgba(255,255,255,0.5); font-size: 30px; font-weight: 100; padding: 20px 38px 20px 2px; text-transform: capitalize; background: transparent; line-height: 40px; color: #fff;}
+.reserve-form .reserve-input:focus{outline: none}
+.reserve-input ::-moz-placeholder, .reserve-input [placeholder] { color: #ff0000; }
+.reserve-form .reserve-button {font-size:21px; color:#fff; top:31px; right: 0; outline: none;}
+#reserve-package-form {height:100%; width: 45%; margin:0 auto;}
+.close-reserve { color: #373737; position: absolute; right: 0; top: 23px; z-index: 998; cursor: pointer; }
+.close-reserve:hover { color: #9a9a9a;}
+.reserve-button { cursor: pointer;  z-index: 0; margin-right: 0; border: none; background: none; }
+.reserve-form { padding: 36px;  background: #292727;}

@@ -2299,6 +2299,52 @@ $(document).ready(function () {
         event.preventDefault();
     });
 
+    /*==============================================================*/
+    //magnificPopup Start
+    /*==============================================================*/
+    $('.reserve-package').magnificPopup({
+        mainClass: 'mfp-fade',
+        closeOnBgClick: true,
+        preloader: false,
+        // for white backgriund
+        fixedContentPos: false,
+        closeBtnInside: false,
+        callbacks: {
+            open: function () {
+                setTimeout(function () {
+                    $('.reserve-input').focus();
+                }, 500);
+                $('#reserve-package-form').parent().addClass('search-popup');
+                if (!isMobile) {
+                    $('body').addClass('overflow-hidden');
+                    //$('body').addClass('position-fixed');
+                    $('body').addClass('width-100');
+                    document.onmousewheel = ScrollStop;
+                } else {
+                    $('body, html').on('touchmove', function (e) {
+                        e.preventDefault();
+                    });
+                }
+            },
+            close: function () {
+                if (!isMobile) {
+                    $('body').removeClass('overflow-hidden');
+                    //$('body').removeClass('position-fixed');
+                    $('body').removeClass('width-100');
+                    $('#search-header input[type=text]').each(function (index) {
+                        if (index == 0) {
+                            $(this).val('');
+                            $("#reserve-package-form").find("input:eq(" + index + ")").css({"border": "none", "border-bottom": "2px solid rgba(255,255,255,0.5)"});
+                        }
+                    });
+                    document.onmousewheel = ScrollStart;
+                } else {
+                    $('body, html').unbind('touchmove');
+                }
+            }
+        }
+    });
+
     $(document).on("click", '.navbar .navbar-collapse a.dropdown-toggle, .accordion-style1 .panel-heading a, .accordion-style2 .panel-heading a, .accordion-style3 .panel-heading a, .toggles .panel-heading a, .toggles-style2 .panel-heading a, .toggles-style3 .panel-heading a, a.carousel-control, .nav-tabs a[data-toggle="tab"], a.shopping-cart', function (e) {
         e.preventDefault();
     });
@@ -2553,4 +2599,9 @@ $(document).on('load', function () {
     }
 
     fullScreenHeight();
+});
+
+$('input').iCheck({
+    checkboxClass: 'icheckbox_minimal',
+    radioClass: 'iradio_minimal',
 });
