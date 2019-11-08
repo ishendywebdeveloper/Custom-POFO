@@ -1496,7 +1496,9 @@
 
 @media (max-width: 991px) {
 
-
+    .menu-center .header-searchbar { padding: 0; }
+    .menu-center .header-social-icon { padding-left: 0; }
+    .menu-center .header-social-icon a i, .menu-center .header-searchbar a i { margin: 0 2px; }
 
     /* typography */
     h1, h2, h3, h4, h5, h6 {margin:0 0 18px; padding:0; letter-spacing: 0; font-weight: 400;}
