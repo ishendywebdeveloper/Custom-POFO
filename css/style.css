@@ -3875,6 +3875,8 @@ header a.logo img.logo-dark{
     width: auto;
     float: left;
     margin-left: -24px;
+    margin-right: -24px;
+    margin-top: 73px;
     background: #ffeded;
 }
 

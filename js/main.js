@@ -2579,11 +2579,12 @@ $(document).ready(function () {
 /* ===================================
  START Page Load
  ====================================== */
-$(document).on('load', function () {
+$(window).on('load', function () {
     var hash = window.location.hash.substr(1);
+
     if (hash != "") {
         setTimeout(function () {
-            $(document).imagesLoaded(function () {
+            $(window).imagesLoaded(function () {
                 var scrollAnimationTime = 1200,
                         scrollAnimation = 'easeInOutExpo';
                 var target = '#' + hash;
