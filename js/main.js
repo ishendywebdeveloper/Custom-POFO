@@ -15,6 +15,8 @@ if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
 function SetMegamenuPosition() {
     if ($(window).width() > 991) {
         setTimeout(function () {
+            // This one has a problem check it out. It shows the sub menu
+            // in a height that is ver low than the main menu
             var totalHeight = $('nav.navbar').outerHeight();
             $('.mega-menu').css({top: totalHeight});
             if ($('.navbar-brand-top').length === 0)

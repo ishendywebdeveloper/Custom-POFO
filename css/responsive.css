@@ -1496,9 +1496,11 @@
 
 @media (max-width: 991px) {
 
-    .menu-center .header-searchbar { padding: 0 1px; }
-    .menu-center .header-social-icon { padding-left: 3px; }
-    .menu-center .header-social-icon a i, .menu-center .header-searchbar a i { margin: 0 2px; }
+    .sml-font.fit-text {max-width: 58px; margin: auto !important;}
+    .row.mb-5.pl-1.col-11 {margin-left: 5px;}
+    .menu-center .header-searchbar {padding: 0 1px;}
+    .menu-center .header-social-icon {padding-left: 3px;}
+    .menu-center .header-social-icon a i, .menu-center .header-searchbar a i {margin: 0 2px;}
 
     /* typography */
     h1, h2, h3, h4, h5, h6 {margin:0 0 18px; padding:0; letter-spacing: 0; font-weight: 400;}
@@ -3109,6 +3111,7 @@
 
 @media (max-width: 767px) {
 
+    .sml-font.fit-text {max-width: initial;}
     body { font-size: 12px; line-height: 20px}
 
     h1, h2, h3, h4, h5, h6 {margin:0 0 17px; padding:0; letter-spacing: 0; font-weight: 400;}
